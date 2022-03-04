@@ -22,6 +22,7 @@ public class HitJudge : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Hit");
             Destroy(other.gameObject);
             SceneManager.LoadScene("SceneFinish");
             menuManagerGameObject.transform.Find("UI/FinishMenu").gameObject.SetActive(true);
